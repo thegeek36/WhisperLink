@@ -5,7 +5,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import SendMessage from './components/SendMessage';
 import ProtectedRoute from './components/ProtectedRoute';
-
+import { Analytics } from "@vercel/analytics/react"
 function App() {
   return (
     <Router>
@@ -16,6 +16,7 @@ function App() {
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path="/:uniqueLink" element={<SendMessage />} />
         </Routes>
+        <Analytics />
       </div>
     </Router>
   );
