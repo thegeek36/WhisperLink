@@ -19,7 +19,7 @@ function SendMessage() {
     // Fetch the username associated with the uniqueLink
     const fetchUsername = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/user/${uniqueLink}`);
+        const response = await fetch(`https://whisperlink-gf99.onrender.com/api/user/${uniqueLink}`);
         if (response.ok) {
           const data = await response.json();
           setUsername(data.username);
@@ -36,7 +36,7 @@ function SendMessage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/api/${uniqueLink}`, {
+      const response = await fetch(`https://whisperlink-gf99.onrender.com/api/${uniqueLink}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message }),

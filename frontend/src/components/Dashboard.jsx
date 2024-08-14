@@ -19,7 +19,7 @@ function Dashboard() {
 
   const fetchUserData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/auth/profile', {
+      const response = await fetch('https://whisperlink-gf99.onrender.com/api/auth/profile', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -36,7 +36,7 @@ function Dashboard() {
 
   const fetchMessages = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/user/messages', {
+      const response = await fetch('https://whisperlink-gf99.onrender.com/api/user/messages', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
